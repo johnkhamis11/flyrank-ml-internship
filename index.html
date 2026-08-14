@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTR & Engagement Opportunity Scoring - Capstone</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1, h2 { color: #0f5132; }
+        .box { background: #f8f9fa; padding: 15px; border-left: 4px solid #0f5132; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>CTR & Engagement Opportunity Scoring</h1>
+    <p><strong>Author:</strong> John Khamis</p>
+
+    <div class="box">
+        <h2>Abstract</h2>
+        <p>This research investigates search discoverability by identifying high-impression pages suffering from below-average Click-Through Rates (CTR). Using DuckDB and baseline heuristic rules on FlyRank's search dataset, we built a scoring engine to rank content optimization opportunities. Our primary rule isolates pages ranking in top positions (< 5.0) with low relative engagement. The model outputs prioritized action codes to guide metadata and content refreshes. Testing confirms the baseline score reliably flags high-leverage pages without target leakage.</p>
+    </div>
+
+    <h2>1. Problem Statement</h2>
+    <p>SEO and content teams often struggle to prioritize which high-volume pages require metadata updates. This work creates a decision-support system to flag pages with high visibility but under-captured intent.</p>
+
+    <h2>2. Data & Methodology</h2>
+    <p>Data was processed using FlyRank's ML Internship warehouse release. We defined features including impressions, position, and baseline CTR. Pages were filtered to eliminate private queries and low-data noise.</p>
+
+    <h2>3. Results & Recommendations</h2>
+    <p>The scoring pipeline successfully generated a ranked action queue (written to <code>work/outputs/baseline_action_score.csv</code>). Key recommendations focus on optimizing Meta Titles and Snippets for high-impression, low-CTR queries.</p>
+
+    <h2>4. Reproducibility & Data Credit</h2>
+    <p>All source code and notebooks are available in the <a href="https://github.com/johnkhamis11/flyrank-ml-internship">GitHub Repository</a>.</p>
+    <p><em>Built on the <a href="https://flyrank.ai">FlyRank ML Internship dataset</a>.</em></p>
+
+</body>
+</html>
